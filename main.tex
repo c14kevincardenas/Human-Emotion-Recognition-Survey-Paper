@@ -1,0 +1,55 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{forest}
+\usepackage[hidelinks]{hyperref}
+\usepackage{subfiles}
+\usepackage{comment}
+\usepackage{graphicx}
+
+\begin{document}
+\title{A Survey on Multimodal Human Emotion Recognition}
+
+\author{Kevin~Cardenas}
+
+% The paper headers
+\markboth{CS6000 - Computer Science Research Survey Paper}%
+{Shell \MakeLowercase{\textit{et al.}}: A Survey on Multimodal Human Emotion Recognition}
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+    \subfile{sections/abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+    artificial intelligence, human emotion recognition, facial expression, speech signals, phsyiological signals, body movement, multimodal
+\end{IEEEkeywords}
+
+
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}
+    \subfile{sections/intro}
+
+\section{Human Emotions}
+    \subfile{sections/emotion}
+
+\section{Artificial Intelligence, Machine Learning and Deep Learning}
+    \subfile{sections/ai}
+
+\section{Unimodal Approaches}
+    \subfile{sections/unimodal}
+    
+\section{Multimodal Approaches}
+    \subfile{sections/multimodal}
+
+\section{Conclusion}
+    \subfile{sections/conclusion}
+
+\newpage
+\bibliographystyle{IEEEtran}
+\bibliography{survey}
+
+
+\end{document}

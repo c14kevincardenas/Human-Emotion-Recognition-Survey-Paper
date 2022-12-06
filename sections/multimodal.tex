@@ -1,0 +1,70 @@
+Despite the amazing advances in unimodal models correctly identifying human \textit{expressions}, there remains the immense task of recognizing human \textit{emotions}. Emotions are far more complex than one static facial expression, more than a video of body gestures, more than the tone of a voice or the words that are spoken, and more than a heart rate. Emotions are a multifaceted, intertwined combination of bodily states and actions. Several researchers \cite{cabitza-2022} devote their research to quantifying the inaccuracy of using a single modality to characterize or classify multiplex human emotion. However, combining these modalities presents an opportunity to better recognize human emotion.
+
+Each of these modalities faces unique challenges either in the databases or in the models which results in a less robust application of the model to robotics or HER technologies that interact with real world data. FER encounters challenges both in existing datasets and models with parts of faces being occluded, potential shadows cast on faces, as well as the angle of the camera capturing the face. One of the most challenging aspects of recognizing emotional body gestures is defining the link between the body expression and what emotion is being expressed \cite{noroozi-2021}. Physiological Signal Processing data collection and cleaning can be extremely tedious and challenging due to the possiblity of data being contaminated by numerous factors including electromagnetic interference, as well as noise in the data due unintentional facial or eye movements \cite{ahmad-2022}. A common challenge of speech emotion recognition is the various quality of sound capturing technology to populate databases of audio clips \cite{zong-2022}. Despite all of these challenges with unimodal datasets and models, there is hope in combining datasets and/or models to be multimodal in order to minimize the shortfalls or mistakes of a unimodal model by having redundancy in the data \cite{cid-2015}. 
+
+\subsection{Multimodal Databases}
+    CMU-MOSEI is the largest database for multimodal human emotion recognition. This dataset consists of over 1000 speakers and 250 topics contributing more than 65 hours of annotated video containing nearly 23500 sentence utterances \cite{zadeh-2018}.
+    
+    MuSe-CAR is a large database collected during car reviews to provide a multimodal dataset for human emotion recognition \cite{stappen-2021}. This dataset contains 366 videos of human interaction in the wild including facial expressions, body language, and speech. 
+
+    AMIGOS \cite{miranda-correa} contains data of 40 participants watching 16 short emotional video clips and 4 longer videos. Physiological signals (EEG, ECG and Galvanic Skin Response (GSR)) were recorded along with both RGB and depth full body videos. 
+    
+    As mentioned previously, IEMOCAP is a large multimodal database including 302 recorded videos annotated for the presence of nine emotions, as well as valence, arousal and dominance. 
+    
+    Also previously referenced, RAVDESS \cite{livingstone_ryerson_2018} is a large database comprising 7356 files containing 24 professional actors (12 female and 12 male) speaking various statements and expressing one of eight emotions, as well as singing and expressing one of six emotions. Each expression is also labeled according to its intensity of normal or strong. 
+
+\subsection{Multimodal Models}
+    Recently, many researchers are recognizing the challenge of classifying human emotions in the wild using unimodal models and are pivoting to incorporate multiple modalities. Despite the desire to create a model including all of the important modalities for HER (FER, body movement, physiological signals and speech), the datasets available mostly comprise data for only 2 or 3 of these modalities making it challenging to have a complete multimodal model. However, there have been significant improvements in models and their results. A majority of HER databases contain audio and visual data with either sentiment or emotion annotations making it more enticing for researchers to focus on FER and SER. 
+
+    Paraskevopoulos et al. \cite{paraskevopoulos-2022}
+    
+    \begin{table}[ht]
+        \centering
+        \begin{tabular}{|p{0.2\linewidth}|p{0.15\linewidth}|p{0.12\linewidth}|p{0.122\linewidth}|p{0.11\linewidth}|}
+        \hline
+        Author & Database & Modalities & Number Emotions & Accuracy\\\hline
+        
+        Paraskevopoulos et al. \cite{paraskevopoulos-2022}
+        & CMU-MOSEI
+        & FER, Speech, Gestures
+        & 9
+        & 82.4\%\\\hline
+        
+        Franceschini et al. \cite{franceschini-2022}
+        & RAVDESS
+        & FER, Speech
+        & 7
+        & 93.17\%\\\hline
+        
+        Joshi et al. \cite{joshi-2022}
+        & IEMOCAP
+        & FER, Speech, Gestures
+        & 4
+        & 84.5\%\\\hline
+        
+        Middya et al. \cite{middya-2022}
+        & RAVDESS, SAVEE
+        & FER, Speech
+        & 7
+        & 79\%, 97\%\\\hline
+        
+        \end{tabular}
+        \caption{\label{tab:categories}Categorical Multi-Modal Human Emotion Recognition.}
+    \end{table}
+
+
+    \begin{table}[ht]
+        \centering
+        \begin{tabular}{|p{0.2\linewidth}|p{0.15\linewidth}|p{0.12\linewidth}|p{0.122\linewidth}|p{0.1\linewidth}|}
+        \hline
+        Author & Database & Modalities & Response & Accuracy\\\hline
+        
+        Paraskevopoulos \cite{paraskevopoulos-2022}
+        & CMU-MOSEI
+        & FER, Speech, Gestures
+        & Arousal, Valence, Liking
+        & 82.4\%\\\hline
+        
+        \end{tabular}
+        \caption{\label{tab:dimension}Dimensional Multi-Modal Human Emotion Recognition.}
+    \end{table}
